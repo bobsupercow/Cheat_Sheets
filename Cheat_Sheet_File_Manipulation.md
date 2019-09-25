@@ -3,7 +3,7 @@
 [Source](https://www.reddit.com/r/sysadmin/comments/aw5f5l/whats_your_goto_copy_command_for_large_amounts_of/)
 ### Step 1 - Initial copy of the data ###
 
-    robocopy \\OLDSERVER\d$\FOLDER D:\FOLDER /e /zb /copy:DATSOU /r:3 /w:3 /log:c:\ROBOCOPY-Logs\FOLDER.log /V /NP
+    `robocopy \\OLDSERVER\d$\FOLDER D:\FOLDER /e /zb /copy:DATSOU /r:3 /w:3 /log:c:\ROBOCOPY-Logs\FOLDER.log /V /NP
 
 * OLDSERVER is the source fileserver
 * D$ is the drive letter on the Source Server
