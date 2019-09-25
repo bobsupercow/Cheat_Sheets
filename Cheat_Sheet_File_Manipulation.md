@@ -3,7 +3,7 @@
 [Source](https://www.reddit.com/r/sysadmin/comments/aw5f5l/whats_your_goto_copy_command_for_large_amounts_of/)
 ### Step 1 - Initial copy of the data ###
 
-`robocopy \\OLDSERVER\d$\FOLDER D:\FOLDER /e /zb /copy:DATSOU /r:3 /w:3 /log:c:\ROBOCOPY-Logs\FOLDER.log /V /NP`
+`robocopy \\OLDSERVER\d$\FOLDER D:\FOLDER /e /zb /copy:DATSOU /r:3 /w:3 /log:c:\ROBOCOPY-Logs\FOLDER.log /V /NP /MT:128`
 
 * OLDSERVER is the source fileserver
 * D$ is the drive letter on the Source Server
@@ -17,3 +17,10 @@
 * /log Will output the log to the folder we created above.
 * /V Produce output in verbose (detailed) mode.
 * /NP Do not show percentage progress
+* /MT:128 Multithreading, more than default (8). 
+
+### Step 2 - Copy again to complete ###
+
+`robocopy \\OLDSERVER\d$\FOLDER D:\FOLDER /e /zb /copy:DATSOU /MIR /r:3 /w:3 /log:c:\ROBOCOPY-Logs\Last-Copy\FOLDER.log /V /NP /MT:128`
+
+* /MIR This is the ‘mirror directory’ switch, this will remove files from the destination that no longer exist in the source.
