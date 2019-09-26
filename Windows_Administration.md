@@ -26,5 +26,5 @@ This is because of a default security policy that disables access to adminstrati
 1. Click the Windows Start icon and search for “regedit”. Right-click and select “run as administrator”.
 1. Expand the tree to HKEY_LOCAL_MACHINE \ SOFTWARE \ Microsoft\ Windows \ CurrentVersion \ policies \ system.
 1. Create a new key (Right click -> New -> choose “DWORD Value (32bit)”).
-1. Name the key “LocalAccountTokenFilterPolicy” and give it the value of “1”. Click OK.regedit policy administrativ shares windows 10
+1. Name the key “LocalAccountTokenFilterPolicy” and give it the value of “1”. Click OK.
 1. Reboot the server to enable the setting to take effect.
