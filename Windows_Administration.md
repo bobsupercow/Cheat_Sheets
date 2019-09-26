@@ -1,7 +1,7 @@
 ### SysInternals Tools ###
 
 For access to all of the sysinternals tools on any Windows box with internet, just Win+R and open 
-'<\\live.sysinternals.com@SSL@443\tools>'
+`\\live.sysinternals.com@SSL@443\tools`
 
 
 
